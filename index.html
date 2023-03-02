@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Movies Something</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="screen1">
+    <header>
+      <div class="logo">
+        <img src="./assets/cinema.png" alt="cinema">
+        <p>star movies</p>
+      </div>
+
+      <h1>Gere uma imagem divertida com seus <span>filmes favoritos</span> e compartilhe com seus amigos!
+      </h1>
+    </header>
+
+    <main>
+      <section>
+        <p>Primeiro escolha seus <strong>gêneros</strong> favoritos!</p>
+        <div class="inputs-container">
+          <label class="sr-only" for="favoriteGenreOne">Gênero Favorito 1</label>
+          <select name="favoriteGenreOne" id="genreSelectOne">
+            <option value="null"></option>
+          </select>
+
+          <label class="sr-only" for="favoriteGenreTwo">Gênero Favorito 2</label>
+          <select name="favoriteGenreTwo" id="genreSelectTwo">
+            <option value="null"></option>
+          </select>
+
+          <label class="sr-only" for="favoriteGenreThree">Gênero Favorito 3</label>
+          <select name="favoriteGenreThree" id="genreSelectThree">
+            <option value="null"></option>
+          </select>
+
+          <label class="sr-only" for="favoriteGenreFour">Gênero Favorito 4</label>
+          <select name="favoriteGenreFour" id="genreSelectFour">
+            <option value="null"></option>
+          </select>
+        </div>
+      </section>
+
+      <section>
+        <p>Agora escolha seus <strong>filmes</strong> favoritos!</p>
+        <div class="inputs-container">
+          <label class="sr-only" for="favoriteMovieOne">Filme Favorito 1</label>
+          <input name="favoriteMovieOne" id="movieInputOne" placeholder="Filme Favorito 1" />
+
+          <label class="sr-only" for="favoriteMovieTwo">Filme Favorito 2</label>
+          <input name="favoriteMovieTwo" id="movieInputTwo" placeholder="Filme Favorito 2" />
+
+          <label class="sr-only" for="favoriteMovieThree">Filme Favorito 3</label>
+          <input name="favoriteMovieThree" id="movieInputThree" placeholder="Filme Favorito 3" />
+
+          <label class="sr-only" for="favoriteMovieFour">Filme Favorito 4</label>
+          <input name="favoriteMovieFour" id="movieInputFour" placeholder="Filme Favorito 4" />
+        </div>
+      </section>
+
+      <section id="themeButtons">
+        <p>Pra finalizar escolhe um <strong>tema</strong> que combina com você!</p>
+
+        <button>#CFADE8</button>
+        <button>#ABE5BC</button>
+        <button>#FFA89A</button>
+        <button>#FFD787</button>
+        <button>#505050</button>
+        <button>#FFFAF0</button>
+      </section>
+
+      <button id="buttonGenerate">GERAR IMAGEM</button>
+    </main>
+  </div>
+
+  <div class="screen2">
+    <button id="closeBtn">X</button>
+    <div class="header">
+      <div class="flex">
+        <div class="logo">
+          <img src="./assets/cinema.png" alt="cinema">
+          <p>star movies</p>
+        </div>
+
+        <div class="saveButtons">
+          <button class="download">
+            <img src="./assets/download.png" alt="Download">
+          </button>
+          <button class="share">
+            <img src="./assets/share.png" alt="Compartilhar">
+          </button>
+        </div>
+      </div>
+
+      <div class="message">
+        <h2>Estes são os filmes favoritos desse usuário!</h2>
+      </div>
+    </div>
+
+    <div class="main">
+
+      <div class="cards">
+        <div id="card-1" class="card">
+          <img src="./assets/d5iIlFn5s0ImszYzBPb8JPIfbXD1.png" alt="Poster">
+          <div class="card-content">
+            <p>Pulp Fiction</p>
+            <span>Ação, crimes, violência</span>
+          </div>
+        </div>
+        <div id="card-2" class="card">
+          <img src="./assets/d5iIlFn5s0ImszYzBPb8JPIfbXD1.png" alt="Poster">
+          <div class="card-content">
+            <p>Pulp Fiction</p>
+            <span>Ação, crimes, violência</span>
+          </div>
+        </div>
+        <div id="card-3" class="card">
+          <img src="./assets/d5iIlFn5s0ImszYzBPb8JPIfbXD1.png" alt="Poster">
+          <div class="card-content">
+            <p>Pulp Fiction</p>
+            <span>Ação, crimes, violência</span>
+          </div>
+        </div>
+        <div id="card-4" class="card">
+          <img src="./assets/d5iIlFn5s0ImszYzBPb8JPIfbXD1.png" alt="Poster">
+          <div class="card-content">
+            <p>Pulp Fiction</p>
+            <span>Ação, crimes, violência</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
