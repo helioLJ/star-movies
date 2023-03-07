@@ -29,7 +29,7 @@
     </header>
 
     <main>
-      <section>
+      <!-- <section>
         <p>Primeiro escolha seus <strong>gêneros</strong> favoritos!</p>
         <div class="inputs-container">
           <label class="sr-only" for="favoriteGenreOne">Gênero Favorito 1</label>
@@ -52,34 +52,42 @@
             <option value="null"></option>
           </select>
         </div>
-      </section>
+      </section> -->
 
       <section>
-        <p>Agora escolha seus <strong>filmes</strong> favoritos!</p>
+        <p>Escolha seus <strong>filmes</strong> favoritos!</p>
         <div class="inputs-container">
-          <label class="sr-only" for="favoriteMovieOne">Filme Favorito 1</label>
-          <input name="favoriteMovieOne" id="movieInputOne" placeholder="Filme Favorito 1" />
+          <div class="input-wrapper">
+            <label class="sr-only" for="favoriteMovieOne">Filme Favorito 1</label>
+            <input name="favoriteMovieOne" id="movieInputOne" placeholder="Filme Favorito 1">
+          </div>
 
-          <label class="sr-only" for="favoriteMovieTwo">Filme Favorito 2</label>
-          <input name="favoriteMovieTwo" id="movieInputTwo" placeholder="Filme Favorito 2" />
+          <div class="input-wrapper">
+            <label class="sr-only" for="favoriteMovieTwo">Filme Favorito 2</label>
+            <input name="favoriteMovieTwo" id="movieInputTwo" placeholder="Filme Favorito 2" />
+          </div>
 
-          <label class="sr-only" for="favoriteMovieThree">Filme Favorito 3</label>
-          <input name="favoriteMovieThree" id="movieInputThree" placeholder="Filme Favorito 3" />
+          <div class="input-wrapper">
+            <label class="sr-only" for="favoriteMovieThree">Filme Favorito 3</label>
+            <input name="favoriteMovieThree" id="movieInputThree" placeholder="Filme Favorito 3" />
+          </div>
 
-          <label class="sr-only" for="favoriteMovieFour">Filme Favorito 4</label>
-          <input name="favoriteMovieFour" id="movieInputFour" placeholder="Filme Favorito 4" />
+          <div class="input-wrapper">
+            <label class="sr-only" for="favoriteMovieFour">Filme Favorito 4</label>
+            <input name="favoriteMovieFour" id="movieInputFour" placeholder="Filme Favorito 4" />
+          </div>
         </div>
       </section>
 
       <section id="themeButtons">
         <p>Pra finalizar escolhe um <strong>tema</strong> que combina com você!</p>
 
-        <button>#CFADE8</button>
-        <button>#ABE5BC</button>
-        <button>#FFA89A</button>
-        <button>#FFD787</button>
-        <button>#505050</button>
-        <button>#FFFAF0</button>
+        <button>purple</button>
+        <button>green</button>
+        <button>red</button>
+        <button>yellow</button>
+        <button>gray</button>
+        <button>white</button>
       </section>
 
       <button id="buttonGenerate">GERAR IMAGEM</button>
@@ -148,7 +156,7 @@
   </div>
 
 
-  <script src="main.js"></script>
+  <script src="./js/main.js" type="module"></script>
 </body>
 
 </html>

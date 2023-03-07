@@ -18,7 +18,32 @@
   --green: #ABE5BC;
   --pink: #FFA89A;
   --yellow: #FFD787;
-  --text-color: #4B4B4B
+  --text-color: #4B4B4B;
+
+}
+
+.purple:root {
+  --gradient: linear-gradient(360deg, hsla(275, 56%, 79%, 1) 0%, hsla(321, 55%, 50%, 1) 100%);
+}
+
+.green:root {
+  --gradient: linear-gradient(360deg, hsla(138, 53%, 78%, 1) 0%, hsla(65, 14%, 83%, 1) 100%);
+}
+
+.red:root {
+  --gradient: linear-gradient(360deg, hsla(8, 100%, 80%, 1) 0%, hsla(343, 80%, 65%, 1) 100%);
+}
+
+.yellow:root {
+  --gradient: linear-gradient(360deg, hsla(40, 100%, 76%, 1) 0%, hsla(42, 100%, 66%, 1) 100%);
+}
+
+.gray:root {
+  --gradient: linear-gradient(360deg, hsla(0, 0%, 31%, 1) 0%, hsla(0, 0%, 9%, 1) 100%);
+}
+
+.white:root {
+  --gradient: linear-gradient(360deg, hsla(40, 100%, 97%, 1) 0%, hsla(197, 61%, 83%, 1) 100%);
 }
 
 .sr-only {
@@ -38,7 +63,7 @@ body {
   background-color: var(--text-color);
   height: 100vh;
   padding-inline: 1.2rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .screen1 {
@@ -109,8 +134,30 @@ section p bold {
   font-weight: bold;
 }
 
+.input-wrapper {
+  display: inline-block;
+  width: calc(50% - 4px);
+  margin-bottom: .4rem;
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  box-shadow: -2.5px 2.5px var(--dark-gray);
+}
+
+.search-bar {
+  position: absolute;
+  z-index: 3;
+
+  background-color: white;
+  padding: 1rem;
+  border-radius: .5rem;
+  border: 1px solid black;
+  width: 100%;
+}
+
 section .inputs-container select,
-section .inputs-container input,
 section button {
   width: calc(50% - 4px);
   margin-bottom: .4rem;
@@ -229,17 +276,16 @@ button:active {
 }
 
 .screen2 {
-  background: linear-gradient(360deg, hsla(275, 56%, 79%, 1) 0%, hsla(321, 55%, 50%, 1) 100%);
-  max-width: 40rem;
+  background: var(--gradient);
+  max-width: 46rem;
   margin: 0 auto;
-  border-radius: 1rem ;
+  border-radius: 1rem;
 
   position: relative;
   padding: 1.4rem;
 
-  transform: translateY(-10rem);
-
-  /* transform: translateY(-80rem); javascript */
+  transform: translateY(0%);
+  transition: transform 0.3s;
 }
 
 .flex {
@@ -256,7 +302,7 @@ button:active {
 }
 
 .header .saveButtons {
-  display: flex;  
+  display: flex;
   gap: 1rem;
 }
 
@@ -318,6 +364,7 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   max-width: 30rem;
   place-self: center;
 }
@@ -325,12 +372,12 @@ button:active {
 .card img {
   border-radius: 1rem;
   height: 22.5rem;
-  width: 17rem;
+  width: 100%;
   object-fit: cover;
 }
 
 .card-content {
-  background-color: rgba(255, 255, 255, 0.36);
+  background-color: #505050a2;
   border: 1px solid white;
   z-index: -1;
   margin-top: -3px;
@@ -338,17 +385,21 @@ button:active {
   width: calc(100% - 10px);
   padding: 2.4rem 0 .2rem 0;
   height: 9rem;
+  padding-inline: 1.2rem;
 }
 
 .card-content p {
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 1.6rem;
+  margin-top: -1.2rem;
 
   color: var(--white);
 }
 
 .card-content span {
+  display: block;
+  margin-top: .5rem;
   font-weight: 300;
   font-size: .8rem;
 
@@ -390,8 +441,17 @@ button:active {
     padding: 3rem 1.5rem;
   }
 
+  .input-wrapper {
+    display: inline-block;
+    width: calc(50% - 1.4rem);
+    margin-bottom: .4rem;
+  }
+
+  .inputs-container .input-wrapper:nth-of-type(odd) {
+    margin-right: 1rem;
+  }
+
   section .inputs-container select,
-  section .inputs-container input,
   section button {
     width: calc(50% - 1.4rem);
     margin-bottom: 1rem;
@@ -421,5 +481,11 @@ button:active {
     height: 4.5rem;
     font-size: 1.5rem;
     margin: 3rem 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .main {
+    padding: 0;
   }
 }
